@@ -1,0 +1,97 @@
+/* Fonts */
+/*
+Lora Medium 500 Titulos importantes
+Lora Regular 500 H3 o Li
+
+Prompt thin 100 spans o cosas asi
+Prompt light 300 texto
+Promt Regular 400
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Prompt:wght@100;300;400&display=swap');
+
+*
+{
+  margin:0px;
+  padding: 0px;
+}
+
+.root
+{
+  height: 100vh;
+  background: rgb(204,172,153);
+  background: linear-gradient(0deg, rgba(204,172,153,1) 0%, rgba(242,207,187,0.8715861344537815) 100%);
+  background-attachment: fixed;
+}
+
+header
+{
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:flex-end;
+}
+
+header nav .sections-href ol
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  margin-right: 10px;
+}
+
+header nav .sections-href ol li
+{
+  display: list-item;
+  cursor: pointer;
+}
+
+header nav .sections-href ol li a
+{
+  display: inline-block;
+  padding: 8px;
+  text-decoration: none;
+  font-family: "lora";
+  font-size: 16px;
+  transition: all 3000ms;
+}
+
+header nav .sections-href ol li a:focus
+{
+  background-color: red;
+}
+
+.content
+{
+  height: 95vh;
+}
+
+.content main
+{
+  width: 100vw;
+  left: 10vh;
+  overflow-y: scroll;
+  min-height: 95vh;
+
+}
+
+.content main::-webkit-scrollbar
+{
+}
+
+.content .aside
+{
+  position: absolute;
+  top: 5vh;
+  width: 10vw;
+  height: 95vh;
+  background-color:red;
+}
+
+.content .aside .right-aside
+{
+  right:0px;
+
+}
