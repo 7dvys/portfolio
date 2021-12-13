@@ -47,3 +47,13 @@ function experiencePanel(panel) {
       break;
   }
 }
+
+
+// LATEST PROJECT
+fetch('https://api.github.com/users/7dvys/repos')
+  .then(response => response.json())
+  .then(data => {
+    $tmp = 0;
+    console.log(data);
+  })
+1

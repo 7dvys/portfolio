@@ -293,10 +293,6 @@ body main section#experience .panel ul{
   margin-left: 1vw;
 }
 
-body main section#experience .panel ul li{
-
-}
-
 body main section#experience .panel ul li::before{
   display: block;
   content: "";
