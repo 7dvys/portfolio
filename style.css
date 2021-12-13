@@ -1,5 +1,6 @@
 /* Fonts */
 /*
+}
 Lora Medium 500 Titulos importantes
 Lora Regular 500 H3 o Li
 
@@ -7,91 +8,305 @@ Prompt thin 100 spans o cosas asi
 Prompt light 300 texto
 Promt Regular 400
 */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Prompt:wght@100;300;400&display=swap');
 
-*
-{
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&display=swap');
+
+:root{
+  /* Colors */
+  --yellow:rgba(250, 212, 27, 1);
+  --creeme:rgba(250, 248, 235, 1);
+  --grey1:rgba(147, 149, 152, 1);
+  --grey2:rgba(118, 119, 123, 1);
+  --grey3:rgba(84, 86, 91, 1);
+  --black:rgba(0, 0, 0, 1);
+}
+
+*{
   margin:0px;
   padding: 0px;
+  font-family: 'Mukta', sans-serif;
+  font-weight: 300;
+  cursor:default;
+  list-style: none;
+  color: var(--black);
 }
 
-.root
-{
-  height: 100vh;
-  background: rgb(204,172,153);
-  background: linear-gradient(0deg, rgba(204,172,153,1) 0%, rgba(242,207,187,0.8715861344537815) 100%);
-  background-attachment: fixed;
+a{
+  text-decoration: none;
+  transition: all 170ms;
+  color: var(--yellow);
+  text-shadow: -0.4px 0.4px 0.05px var(--grey1);
 }
 
-header
-{
-  width: 100vw;
-  height: 5vh;
+a:hover{
+  cursor: pointer;
+  text-shadow: -0.8px 0.8px 0.5px var(--yellow);
+}
+
+p{
+  font-size: 1.6rem;
+}
+
+h1{
+  font-size: 5rem;
+  text-indent: -4px;
+  color: var(--yellow);
+  text-shadow: 1px 1px 1px var(--grey1);
+  line-height: 5rem;
+}
+
+h2{
+  line-height: 5.5rem;
+  color: var(--grey3);
+  font-size: 4rem;
+}
+
+p{
+  margin-top: 1vh;
+  max-width: 32vw;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--creeme);
+}
+
+/* END GENERAL */
+
+
+
+
+
+/* HEADER */
+
+body header{
+  position:sticky;
+  top: 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:flex-end;
+  justify-content: space-between;
+  background-color: rgba(250, 248, 235, 0.9);
+  height: 4rem;
+  /* width: calc(100vw - 5rem); */
+  margin:0px 2rem;
+  font-size: 1.4rem;
+  transition: all 400ms;
 }
 
-header nav .sections-href ol
-{
+body header a.resume{
+  color: var(--grey3);
+  border: 1.5px solid var(--grey1);
+  padding:0px 1rem;
+}
+
+body header a.resume:hover{
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+body header ul{
   display: flex;
   flex-direction: row;
+  gap: 0px 0.5rem;
+}
+
+body header ul li a{
+  color: var(--grey3);
+
+}
+
+body header ul li a:hover{
+  color: var(--yellow);
+}
+
+
+/* END HEADER */
+
+
+
+/* Main */
+/* GENERAL SECTION */
+body main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body main section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 100vh; */
+  flex-basis: 100vh;
+  padding: 0px 20vw;
+
+}
+/* END GENERAL SECTION */
+
+
+
+
+/* SECTION #HOME */
+body main section#home{
+  align-items: start;
+  flex-basis: calc(100vh - 6rem);
+}
+
+body main section#home h2{
+  line-height: 5.5rem;
+  color: var(--grey3);
+  font-size: 5rem;
+}
+
+body main section#home h3{
+  color: var(--grey2);
+}
+
+body main section#home a.current-project{
+  color: var(--grey3);
+  margin-top: 2.5vw;
+  font-size: 1.4rem;
+  border: 1.5px solid var(--grey1);
+  padding: 0.5rem 1rem;
+}
+
+body main section#home a.current-project:hover{
+  border-color: var(--yellow);
+  color: var(--yellow);
+  text-shadow: -0.8px 0.8px 0.5px var(--yellow);
+}
+
+/* END SECTION #HOME */
+
+
+/* SECTION ABOUT */
+body main section#about{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  list-style: none;
-  margin-right: 10px;
-}
-
-header nav .sections-href ol li
-{
-  display: list-item;
-  cursor: pointer;
-}
-
-header nav .sections-href ol li a
-{
-  display: inline-block;
-  padding: 8px;
-  text-decoration: none;
-  font-family: "lora";
-  font-size: 16px;
-  transition: all 3000ms;
-}
-
-header nav .sections-href ol li a:focus
-{
-  background-color: red;
-}
-
-.content
-{
-  height: 95vh;
-}
-
-.content main
-{
-  width: 100vw;
-  left: 10vh;
-  overflow-y: scroll;
-  min-height: 95vh;
+  align-content: center;
+  align-items: flex-start;
 
 }
 
-.content main::-webkit-scrollbar
-{
+body main section#about h2{
+ flex-basis: 100%; 
+ line-height: 5.5rem;
 }
 
-.content .aside
-{
-  position: absolute;
-  top: 5vh;
-  width: 10vw;
-  height: 95vh;
-  background-color:red;
+body main section#about.aboutText{
+  flex-basis: 60%;
 }
 
-.content .aside .right-aside
-{
-  right:0px;
+body main section#about img{
+  margin-top: 1vh;
+  width: 30%;
+  box-shadow: 4px 4px 6px var(--grey2);
+}
+
+body main section#about ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1vh;
+}
+
+body main section#about ul li{
+  flex-basis: 50%;
+  line-height: 2.6rem;
+  font-size: 1.2rem;
+}
+
+body main section#about ul li::before{
+  content: "";
+  width: 0px;
+  height: 1px;
+  border-left: 3px solid var(--grey3);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  margin-right: 7px;
+}
+/* END SECTION ABOUT */
+
+
+/* SECTION EXPERIENCE */
+
+body main section#experience{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  width: 50vw;
+  
+}
+
+body main section#experience h2{
+  flex-basis: 100%;
+  margin-bottom: 2vh;
+}
+
+body main section#experience ul{
+  flex-basis: 15vw;
+}
+
+body main section#experience ul li.item{
+  line-height: 2.5rem;
+  border-left: 4px solid var(--grey1);
+  padding-left: 15px;
+  transition: all 300ms;
+}
+
+body main section#experience ul li.item:hover{
+  background-color: rgba(147, 149, 152, 0.1);
+  border-color: var(--grey2);
+}
+
+body main section#experience ul li.item.active{
+  background-color: rgba(147, 149, 152, 0.2);
+  border-color: var(--black);
+}
+
+body main section#experience .panel{
+  display: none;
+  flex-basis: 33vw;
+  min-height: 20vh;
+}
+
+body main section#experience .panel h3{
+  color: var(--black);
+  font-size: 1.4rem;
+  line-height: 1rem;
 
 }
+
+body main section#experience .panel time{
+  color: var(--grey2);
+  font-size: 1.1rem;
+}
+
+body main section#experience .panel ul{
+  margin-top: 1vh;
+  margin-left: 1vw;
+}
+
+body main section#experience .panel ul li{
+
+}
+
+body main section#experience .panel ul li::before{
+  display: block;
+  content: "";
+  position: relative;
+  top: 1rem;
+  left: -1rem;
+  width: 0.3rem;
+  border-left: .5rem solid var(--black);
+  border-top: .25rem solid transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+
