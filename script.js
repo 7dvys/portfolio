@@ -53,7 +53,14 @@ function experiencePanel(panel) {
 fetch('https://api.github.com/users/7dvys/repos')
   .then(response => response.json())
   .then(data => {
-    $tmp = 0;
-    console.log(data);
+    let currentProject=0;
+    var currentProjectUrl;
+    data.forEach(element => {
+      let compare = element.updated_at.localeCompare(currentProject)
+      if(compare == 1){
+        currentProject = element.updated_at;
+        currentProjectUrl = element.clone_url;
+      }
+    })
+    document.querySelector('a.current-project').href = currentProjectUrl;1
   })
-1
