@@ -62,5 +62,5 @@ fetch('https://api.github.com/users/7dvys/repos')
         currentProjectUrl = element.clone_url;
       }
     })
-    document.querySelector('a.current-project').href = currentProjectUrl;1
+    document.querySelector('a.current-project').href = currentProjectUrl;
   })
