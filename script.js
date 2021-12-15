@@ -59,8 +59,23 @@ fetch('https://api.github.com/users/7dvys/repos')
       let compare = element.updated_at.localeCompare(currentProject)
       if(compare == 1){
         currentProject = element.updated_at;
+        console.log(element);
         currentProjectUrl = element.clone_url;
       }
     })
     document.querySelector('a.current-project').href = currentProjectUrl;
   })
+
+// Work I have built :D
+
+  fetch('https://api.github.com/repos/7dvys/portfolio/contents/?ref=dev')
+    .then(response => response.json())
+    .then(data => {
+      fetch(data[1].download_url)
+        .then(response => response.text())
+        .then(data => {
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(data,'text/html')
+        })
+    })
+
