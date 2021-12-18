@@ -57,16 +57,14 @@ fetch('https://api.github.com/users/7dvys/repos') //Get repos
   let currentProjectUrl = '';
   var repos_ready_to_display = [];
   
-    repos_info.forEach(repo_info => {
+    repos_info.forEach(function(repo_info,index){
 
     // LATEST PROJECT
       let compare = repo_info.updated_at.localeCompare(currentProject);
       if(compare == 1){
         currentProject = repo_info.updated_at;
-        currentProjectUrl = repo_info.clone_url;
+        currentProjectUrl = repo_info.html_url;
       }
-
-      console.log(repo_info);
 
     // Work I have built :D
       let branch = 'master';
@@ -74,26 +72,57 @@ fetch('https://api.github.com/users/7dvys/repos') //Get repos
         .then(response => response.json())
         .then(repo_content => {
           if(repo_content.length != 0){
-            let portfolio_banner = false;
-            let readme = false;
 
             repo_content.forEach(file => { //filter repos ready to display :3
               if(file.name == 'portfolio_banner.png' || file.name == 'portfolio_banner.jpg' || file.name == 'portfolio_banner.jpeg'){
-                portfolio_banner = true;
+                repos_ready_to_display[index] = file;
               }
 
-              if(file.name == 'readme.md'){
-                readme = true;
-              }
-
-              if(portfolio_banner != false && readme != false){  
-                repos_ready_to_display.pop(file);
-              }
             })
           }
         })
+
+        // Generate work panels (x3)
+        
+
+        // Generate work cards
+        let work_section = document.querySelector("section#work");
+        let archive_section = document.createElement('article');
+        console.log(repos_ready_to_display);
+        archive_section.classList.add('archive_side'+(index%2));
+
+        archive_section.innerHTML =
+          `
+            <div class='card-header'>
+              <h3>${repo_info.name}</h3>
+              <a href='${repo_info.html_url}'>g</a>
+              <a href='${repo_info.homepage}'>h</a>
+            </div>
+            <div class='card-body'>
+              <p>${repo_info.description}</p>
+            </div>
+            <div class='card-footer'>
+              <span>Last updated at ${repo_info.updated_at}</span>
+              <span>Created at ${repo_info.created_at}</span>
+            </div>
+          `;
+
+          //languages pending
+
+        work_section.append(archive_section);
+        console.log(work_section);
+        console.log(repo_info);
+        // name
+        // description
+        // html_url: url
+        // Fetch-> languages_url: langs
+        // created_at
+        // updated_at
+        // homepage
+
+        
       })
-    
+
     // Display Latest projext
     document.querySelector('a.current-project').href = currentProjectUrl;
 
