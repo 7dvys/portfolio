@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&display=swap');
+
+:root{
+  /* Colors */
+  --yellow:rgba(250, 212, 27, 1);
+  --creeme:rgba(250, 248, 235, 1);
+  --grey1:rgba(147, 149, 152, 1);
+  --grey2:rgba(118, 119, 123, 1);
+  --grey3:rgba(84, 86, 91, 1);
+  --black:rgba(0, 0, 0, 1);
+}
+
+*{
+  margin:0px;
+  padding: 0px;
+  font-family: 'Mukta', sans-serif;
+  cursor:default;
+  list-style: none;
+  color: var(--black);
+}
+
+a
