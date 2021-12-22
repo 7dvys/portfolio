@@ -17,6 +17,76 @@
   cursor:default;
   list-style: none;
   color: var(--black);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 250ms;
 }
 
-a
+a{
+  color: var(--yellow);
+  text-shadow: 0.1 -0.1 0.3px var(--grey1) ;
+}
+
+a:hover{
+  text-shadow: 1px -1px 1px var(--yellow);
+}
+
+header a{
+  color: var(--grey3);
+}
+
+header a:hover{
+  color: var(--yellow);
+}
+
+p{
+  color: var(--grey3);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+body header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+body header ul{
+  display: flex;
+  flex-direction: row;
+}
+
+body main{
+  display: flex;
+  flex-direction: row;
+}
+
+body main div.mainbox{
+  order: 1;
+}
+
+body main div.mainBox li::before{
+  display: block;
+  content: "";
+  position: relative;
+  top: 1rem;
+  left: -1rem;
+  width: 0.3rem;
+  border-left: .5rem solid var(--black);
+  border-top: .25rem solid transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+body div.aside.asideRight{
+  background-color: red;
+  order: 2;
+}
+
+body div.aside.asideLeft{
+  background-color: green;
+  order: 0;
+}
