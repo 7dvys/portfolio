@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&display=swap');
-
+/* GENERALES */
 :root{
   /* Colors */
   --yellow:rgba(250, 212, 27, 1);
@@ -14,62 +14,114 @@
   margin:0px;
   padding: 0px;
   font-family: 'Mukta', sans-serif;
+  font-weight: 300;
   cursor:default;
   list-style: none;
   color: var(--black);
-  font-size: 1.2rem;
   text-decoration: none;
   transition: all 250ms;
+  z-index: 0;
 }
 
 a{
+  font-size: 1.6rem;
   color: var(--yellow);
-  text-shadow: 0.1 -0.1 0.3px var(--grey1) ;
+  text-shadow: 0.1px -0.1px 0.3px var(--grey1) ;
 }
 
 a:hover{
-  text-shadow: 1px -1px 1px var(--yellow);
+  text-shadow: 0.1px -0.1px 0.3px var(--yellow);
+  cursor: pointer;
 }
 
-header a{
-  color: var(--grey3);
+.withBorder{
+  border: 1.5px solid var(--yellow);
+  padding:0px 1rem;
 }
 
-header a:hover{
-  color: var(--yellow);
+.withBorder:hover{
+  border: 1.5px solid var(--yellow);
 }
 
 p{
+  font-size: 1.6rem;
   color: var(--grey3);
+  margin-top: 1vh;
+}
+
+h1{
+  font-size: 5rem;
+  text-indent: -4px;
+  color: var(--yellow);
+  text-shadow: 1px 1px 1px var(--grey1);
+  line-height: 5rem;
+}
+
+h2{
+  line-height: 5.5rem;
+  color: var(--grey3);
+  font-size: 4rem;
 }
 
 body{
   display: flex;
   flex-direction: column;
   align-content: center;
+  background-color: var(--creeme);
+  min-width: 200px;
 }
 
+/* FIN GENERALES */
+
+/* HEADER */
 body header{
+  position: sticky;
+  top: 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0.9rem 1.8rem;
+  background-color: rgba(250, 248, 235, 0.9);
+  transition: all 400ms;
+  z-index: 1;
 }
 
 body header ul{
   display: flex;
   flex-direction: row;
+  gap: 0.5rem;
 }
 
+body header a{
+  font-size: 1.4rem;
+  color: var(--grey3);
+}
+
+body header a:hover{
+  color: var(--yellow);
+}
+
+body header .withBorder{
+  border: 1.5px solid var(--grey1);
+}
+
+/* FIN HEADER */
+
+/* MAIN */
 body main{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
-body main div.mainbox{
-  order: 1;
+  /* SECCIONES */
+    /* GENERALES */
+body main div.sectionsBox{
+  display: flex;
+  flex-direction: column;
 }
 
-body main div.mainBox li::before{
+body main div.sectionsBox li::before{
   display: block;
   content: "";
   position: relative;
@@ -80,13 +132,144 @@ body main div.mainBox li::before{
   border-top: .25rem solid transparent;
   border-bottom: .25rem solid transparent;
 }
+    /* END GENERALES */
+    /* SECTION */
+      /* GENERALES */
+body main div.sectionsBox section{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  border:1px solid chartreuse;
+  flex-basis: 100vh;
+}
+
+body main div.sectionsBox section:first-child{
+  flex-basis: calc(100vh - 4.2rem);
+}
+      /* END GENERALES */
+      /* SECTION HOME */
+body main div.sectionsBox section#home{
+  padding: 0px 25vw;
+}
+
+body main div.sectionsBox section#home span,
+body main div.sectionsBox section#home h2,
+body main div.sectionsBox section#home h1,
+body main div.sectionsBox section#home p{
+  flex-basis: 100%;
+}
+
+body main div.sectionsBox section#home span{
+  color: var(--grey2);
+  font-size: 1rem;
+}
+
+body main div.sectionsBox section#home h2{
+  line-height: 5.5rem;
+  color: var(--grey3);
+  font-size: 5rem;
+}
+
+body main div.sectionsBox section#home p{
+  margin-right: 15vw;
+  margin-bottom: 3vh;
+}
+      /* END SECTION HOME */
+
+      /* SECTION ABOUT */
+body main div.sectionsBox section#about{
+  padding: 0px 25vw;
+  justify-content: space-between;
+}
+
+body main div.sectionsBox section#about div.aboutText{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+body main div.sectionsBox section#about h2{
+  flex-basis: 100%;
+}
+
+body main div.sectionsBox section#about p{
+  flex-basis: 60%;
+}
+
+body main div.sectionsBox section#about ul{
+  margin-left: 1rem;
+  margin-top: 1rem;
+  flex-basis: 80%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+
+
+body main div.sectionsBox section#about img{
+  width: 310px;
+  box-shadow: 3px 3px 2px var(--grey3);
+  margin-top: 1vh;
+}
+
+
+      /* END SECTION ABOUT */
+
+      /* SECTION EXPERIENCE */
+
+body main div.sectionsBox section#experience{
+  padding: 0px 25vw;
+  justify-content: flex-start;
+}
+
+body main div.sectionsBox section#experience h2{
+  flex-basis: 100%;
+}
+
+body main div.sectionsBox section#experience ul{
+  margin-right: 3rem;
+}
+
+body main div.sectionsBox section#experience div.panel{
+  min-height: 35%;
+}
+      
+      /* ENDSECTION EXPERIENCE */
+    /* END SECTION */
+  /* END SECCIONES */
+
+  /* ASIDE */
+body div.aside{
+  flex-basis: 100px;
+  /* padding: 0px 1rem; */
+}
 
 body div.aside.asideRight{
   background-color: red;
-  order: 2;
 }
 
 body div.aside.asideLeft{
   background-color: green;
-  order: 0;
+}
+  /* END ASIDE */
+/* END MAIN */
+
+/* FOOTER */
+ 
+/* / Tablets en horizonal y escritorios normales */
+   /* ------------------------------------------------------------------------- / */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+ }
+ 
+/* / Móviles en horizontal o tablets en vertical */
+   /* ------------------------------------------------------------------------- / */
+@media (max-width: 767px) {
+
+ }
+ 
+/* / Móviles en vertical */
+   /* ------------------------------------------------------------------------- */ 
+@media (max-width: 480px) {
+
 }

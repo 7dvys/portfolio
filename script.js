@@ -5,7 +5,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     document.querySelector("body header").style.top = "0px";
   } else {
-    document.querySelector("body header").style.top = "-4rem";
+    document.querySelector("body header").style.top = "-5rem";
   }
 
   if(currentScrollPos != 0){
@@ -124,7 +124,7 @@ fetch('https://api.github.com/users/7dvys/repos') //Get repos
       })
 
     // Display Latest projext
-    document.querySelector('a.current-project').href = currentProjectUrl;
+    document.querySelector('a.currentProject').href = currentProjectUrl;
 
   })
 
