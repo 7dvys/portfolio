@@ -46,7 +46,6 @@ p{
 body{
   display: flex;
   flex-direction: column;
-  align-content: center;
 }
 
 body header{
@@ -63,6 +62,7 @@ body header ul{
 body main{
   display: flex;
   flex-direction: row;
+  gap: 20vw;
 }
 
 body main div.mainbox{
@@ -80,6 +80,8 @@ body main div.mainBox li::before{
   border-top: .25rem solid transparent;
   border-bottom: .25rem solid transparent;
 }
+
+body div.aside{}
 
 body div.aside.asideRight{
   background-color: red;
