@@ -40,6 +40,7 @@ a:hover{
 
 .withBorder{
   border: 1.5px solid var(--yellow);
+  border-radius: 3px;
   padding:0px 1rem;
 }
 
@@ -318,17 +319,22 @@ body main div.sectionsBox section#work div.bigCard{
   border-radius: 3px;
   min-height: 40vh;
   margin: 2vh 0px;
+  border-radius: .8rem;
+  overflow: hidden;
+  margin-bottom: 10vh;
+
 }
 
 body main div.sectionsBox section#work div.bigCard div.content{
   display: flex;
-  padding: 2vh 2vw;
+  padding: 3vh 2vw;
   flex-direction: column;
   flex-grow: 0;
   justify-content: space-between;
-  height: calc(100% - 4vh);
+  height: calc(100% - 6vh);
   gap:1vh;
   background-color: rgba(0, 0, 0, 0.8);
+  
 }
 
 body main div.sectionsBox section#work div.bigCard div.content:hover{
@@ -351,6 +357,7 @@ body main div.sectionsBox section#work div.bigCard div.content div.textAndLinks{
 body main div.sectionsBox section#work div.bigCard div.content div.textAndLinks h3{
   font-size: 3rem;
   color: var(--white);
+  font-family: 'Noto Sans';
 }
 
 body main div.sectionsBox section#work div.bigCard div.content div.textAndLinks div.links{
@@ -388,11 +395,30 @@ body main div.sectionsBox section#work div.bigCard div.content div.detailsAndCon
 body main div.sectionsBox section#work div.bigCard div.content div.detailsAndControls div.controls{
   display: flex;
   filter: invert(83%) sepia(100%) saturate(0%) hue-rotate(38deg) brightness(112%) contrast(103%);
-
   gap: 1rem;
 }
-
       /* END SECTION WORK bigCard */        
+      /* SECTION WORK PROJECTS */
+body main div.sectionsBox section#work div.projects{
+  height: 60vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+body main div.sectionsBox section#work div.projects::-webkit-scrollbar{
+  display: none;
+}
+
+body main div.sectionsBox section#work div.projects div.project{
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  min-height: 9rem;
+}
+
+      /* END SECTION WORK PROJECTS */
       /* END SECTION WORK */
 
     /* END SECTION */
