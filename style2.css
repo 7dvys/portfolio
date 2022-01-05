@@ -322,6 +322,8 @@ body main div.sectionsBox section#work div.bigCard{
   border-radius: .8rem;
   overflow: hidden;
   margin-bottom: 10vh;
+  border: 1px solid var(--grey1);
+
 
 }
 
@@ -334,6 +336,7 @@ body main div.sectionsBox section#work div.bigCard div.content{
   height: calc(100% - 6vh);
   gap:1vh;
   background-color: rgba(0, 0, 0, 0.8);
+  
   
 }
 
@@ -405,6 +408,11 @@ body main div.sectionsBox section#work div.projects{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  box-shadow: 0px -1px 1px -1px var(--grey1),0px 1px 1px -1px var(--grey1);
+  gap: 1rem;
+  padding: 1rem 0px;
 }
 
 body main div.sectionsBox section#work div.projects::-webkit-scrollbar{
@@ -413,9 +421,25 @@ body main div.sectionsBox section#work div.projects::-webkit-scrollbar{
 
 body main div.sectionsBox section#work div.projects div.project{
   display: flex;
-  flex-direction: column;
-  width: 8rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 14rem;
   min-height: 9rem;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--grey1);
+  
+
+
+}
+
+body main div.sectionsBox section#work div.projects div.project div.links img{
+  height: 1rem;
+}
+
+body main div.sectionsBox section#work div.projects div.project p{
+  flex-basis: 80%;
 }
 
       /* END SECTION WORK PROJECTS */
