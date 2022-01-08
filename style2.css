@@ -403,7 +403,7 @@ body main div.sectionsBox section#work div.bigCard div.content div.detailsAndCon
       /* END SECTION WORK bigCard */        
       /* SECTION WORK PROJECTS */
 body main div.sectionsBox section#work div.projects{
-  height: 60vh;
+  height: 80vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: row;
@@ -429,9 +429,6 @@ body main div.sectionsBox section#work div.projects div.project{
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid var(--grey1);
-  
-
-
 }
 
 body main div.sectionsBox section#work div.projects div.project div.links img{
@@ -441,9 +438,18 @@ body main div.sectionsBox section#work div.projects div.project div.links img{
 body main div.sectionsBox section#work div.projects div.project p{
   flex-basis: 80%;
 }
-
       /* END SECTION WORK PROJECTS */
       /* END SECTION WORK */
+      /* SECTION CONTACT */
+body main div.sectionsBox section#contact {
+  justify-content: center;
+}
+
+body main div.sectionsBox section#contact h2{
+  flex-basis: 100%;
+  
+}
+      /* END SECTION CONTACT */
 
     /* END SECTION */
   /* END SECCIONES */
