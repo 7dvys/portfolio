@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 /* GENERALES */
 :root{
   /* Colors */
@@ -8,6 +9,9 @@
   --grey2:rgba(118, 119, 123, 1);
   --grey3:rgba(84, 86, 91, 1);
   --black:rgba(0, 0, 0, 1);
+  --white: #FFFFFF;
+  --generalPadding: 0px 25vw;
+  --generalBoxShadow:1px 1px 2px var(--grey3);
 }
 
 *{
@@ -36,6 +40,7 @@ a:hover{
 
 .withBorder{
   border: 1.5px solid var(--yellow);
+  border-radius: 3px;
   padding:0px 1rem;
 }
 
@@ -68,7 +73,8 @@ body{
   display: flex;
   flex-direction: column;
   align-content: center;
-  background-color: var(--creeme);
+  background: rgb(250,248,235);
+  background: linear-gradient(135deg, rgba(250,248,235,1) 0%, rgba(241,238,219,1) 100%);
   min-width: 200px;
 }
 
@@ -140,7 +146,6 @@ body main div.sectionsBox section{
   display: flex;
   flex-flow: row wrap;
   align-content: center;
-  border:1px solid chartreuse;
   flex-basis: 100vh;
 }
 
@@ -150,7 +155,7 @@ body main div.sectionsBox section:first-child{
       /* END GENERALES */
       /* SECTION HOME */
 body main div.sectionsBox section#home{
-  padding: 0px 25vw;
+  padding: var(--generalPadding);
 }
 
 body main div.sectionsBox section#home span,
@@ -179,7 +184,7 @@ body main div.sectionsBox section#home p{
 
       /* SECTION ABOUT */
 body main div.sectionsBox section#about{
-  padding: 0px 25vw;
+  padding: var(--generalPadding);
   justify-content: space-between;
 }
 
@@ -209,7 +214,8 @@ body main div.sectionsBox section#about ul{
 
 body main div.sectionsBox section#about img{
   width: 310px;
-  box-shadow: 3px 3px 2px var(--grey3);
+  box-shadow: var(--generalBoxShadow);
+  border-radius: 3px;
   margin-top: 1vh;
 }
 
@@ -219,7 +225,7 @@ body main div.sectionsBox section#about img{
       /* SECTION EXPERIENCE */
 
 body main div.sectionsBox section#experience{
-  padding: 0px 25vw;
+  padding: var(--generalPadding);
   justify-content: flex-start;
 }
 
@@ -292,22 +298,157 @@ body main div.sectionsBox section#experience .panel ul li::before{
 
       /* SECTION WORK */
 
+      /* SECTION WORK GENERALES */
 body main div.sectionsBox section#work{
-  padding: 0px 25vw;
+  padding: 0px 20vw;
+  font-family: "Noto Sans";
 }
 
 body main div.sectionsBox section#work h2{
   flex-basis: 100%;
 }
+      /* END SECTION WORK GENERALES */
+
+      /* SECTION WORK bigCard */
 
 body main div.sectionsBox section#work div.bigCard{
-  flex-basis: 100%;
-  border:1px solid black;
-  height: 40vh;
-  margin: 5vh 0px;
+  background-image: url("https://raw.githubusercontent.com/7dvys/prueba1/master/portfolio_banner.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--generalBoxShadow);
+  border-radius: 3px;
+  min-height: 40vh;
+  margin: 2vh 0px;
+  border-radius: .8rem;
+  overflow: hidden;
+  margin-bottom: 10vh;
+  border: 3px solid var(--grey1);
+
+
 }
-        
+
+body main div.sectionsBox section#work div.bigCard div.content{
+  display: flex;
+  padding: 3vh 2vw;
+  flex-direction: column;
+  flex-grow: 0;
+  justify-content: space-between;
+  height: calc(100% - 6vh);
+  gap:1vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  
+  
+}
+
+body main div.sectionsBox section#work div.bigCard div.content:hover{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+body main div.sectionsBox section#work div.bigCard div.content:hover div.textAndLinks p,
+body main div.sectionsBox section#work div.bigCard div.content:hover div.detailsAndControls div.details,
+  body main div.sectionsBox section#work div.bigCard div.content:hover div.textAndLinks h3{
+  opacity: 0;
+}
+
+body main div.sectionsBox section#work div.bigCard div.content div.textAndLinks{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body main div.sectionsBox section#work div.bigCard div.content div.textAndLinks h3{
+  font-size: 3rem;
+  color: var(--white);
+  font-family: 'Noto Sans';
+}
+
+body main div.sectionsBox section#work div.bigCard div.content div.textAndLinks div.links{
+  display: flex;
+  gap: 1rem;
+}
+
+body main div.sectionsBox section#work div.bigCard div.content div.textAndLinks div.links img{
+  height: 3rem;
+  filter: invert(83%) sepia(100%) saturate(0%) hue-rotate(38deg) brightness(112%) contrast(103%);
+}
+
+body main div.sectionsBox section#work div.bigCard div.content div.textAndLinks p{
+  flex-basis: 80%;
+  color: var(--grey1);
+  margin: 0px;
+}
+
+body main div.sectionsBox section#work div.bigCard div.content div.detailsAndControls{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body main div.sectionsBox section#work div.bigCard div.content div.detailsAndControls div.details{
+  display: flex;
+  flex-direction: column;
+}
+
+body main div.sectionsBox section#work div.bigCard div.content div.detailsAndControls div.details span{
+  color: var(--white);
+}
+
+body main div.sectionsBox section#work div.bigCard div.content div.detailsAndControls div.controls{
+  display: flex;
+  filter: invert(83%) sepia(100%) saturate(0%) hue-rotate(38deg) brightness(112%) contrast(103%);
+  gap: 1rem;
+}
+      /* END SECTION WORK bigCard */        
+      /* SECTION WORK PROJECTS */
+body main div.sectionsBox section#work div.projects{
+  height: 80vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-basis: 100%;
+  box-shadow: 0px -3px 3px -3px var(--grey1),0px 3px 3px -3px var(--grey1);
+  gap: 1rem;
+  padding: 1rem 0px;
+}
+
+body main div.sectionsBox section#work div.projects::-webkit-scrollbar{
+  display: none;
+}
+
+body main div.sectionsBox section#work div.projects div.project{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 9rem;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 3px solid var(--grey1);
+}
+
+body main div.sectionsBox section#work div.projects div.project div.links img{
+  height: 1rem;
+}
+
+body main div.sectionsBox section#work div.projects div.project p{
+  flex-basis: 80%;
+}
+      /* END SECTION WORK PROJECTS */
       /* END SECTION WORK */
+      /* SECTION CONTACT */
+body main div.sectionsBox section#contact {
+  justify-content: center;
+}
+
+body main div.sectionsBox section#contact h2{
+  flex-basis: 100%;
+  
+}
+      /* END SECTION CONTACT */
 
     /* END SECTION */
   /* END SECCIONES */
@@ -321,11 +462,9 @@ body div.aside{
 body div.aside{}
 
 body div.aside.asideRight{
-  background-color: red;
 }
 
 body div.aside.asideLeft{
-  background-color: green;
 }
   /* END ASIDE */
 /* END MAIN */
