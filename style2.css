@@ -403,13 +403,11 @@ body main div.sectionsBox section#work div.bigCard div.content div.detailsAndCon
       /* END SECTION WORK bigCard */        
       /* SECTION WORK PROJECTS */
 body main div.sectionsBox section#work div.projects{
-  height: 80vh;
+  max-height: 80vh;
   overflow-y: scroll;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
-  flex-basis: 100%;
   box-shadow: 0px -3px 3px -3px var(--grey1),0px 3px 3px -3px var(--grey1);
   gap: 1rem;
   padding: 1rem 0px;
@@ -423,20 +421,50 @@ body main div.sectionsBox section#work div.projects div.project{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-height: 9rem;
   justify-content: space-between;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 3px solid var(--grey1);
 }
 
+body main div.sectionsBox section#work div.projects div.project h3{
+  font-size: 2rem;
+  line-height: 2.2rem;
+}
+
+body main div.sectionsBox section#work div.projects div.project div.links{
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
 body main div.sectionsBox section#work div.projects div.project div.links img{
-  height: 1rem;
+  height: 1.5rem;
+  transition: all 10ms;
+}
+
+body main div.sectionsBox section#work div.projects div.project div.links img:hover{
+  filter: invert(86%) sepia(54%) saturate(3962%) hue-rotate(346deg) brightness(101%) contrast(94%);
+
 }
 
 body main div.sectionsBox section#work div.projects div.project p{
-  flex-basis: 80%;
+  flex-basis: 100%;
+  margin-right: 3rem;
+  margin-top: 0px;
 }
+
+body main div.sectionsBox section#work div.projects div.project div.details{
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+}
+
+body main div.sectionsBox section#work div.projects div.project div.details ul.lenguages{
+  display: flex;
+  gap: 0.3rem;
+}
+
       /* END SECTION WORK PROJECTS */
       /* END SECTION WORK */
       /* SECTION CONTACT */
