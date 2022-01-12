@@ -156,10 +156,6 @@ window.onscroll = function() {
 
 
 
-
-
-
-
   // fetch('https://api.github.com/repos/7dvys/portfolio/contents/?ref=dev')
   //   .then(response => response.json())
   //   .then(data => {

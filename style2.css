@@ -400,6 +400,12 @@ body main div.sectionsBox section#work div.bigCard div.content div.detailsAndCon
   filter: invert(83%) sepia(100%) saturate(0%) hue-rotate(38deg) brightness(112%) contrast(103%);
   gap: 1rem;
 }
+
+body main div.sectionsBox section#work div.bigCard div.content div.detailsAndControls div.controls img:hover,
+body main div.sectionsBox section#work div.bigCard div.content div.textAndLinks div.links img:hover{
+  cursor: pointer;
+}
+
       /* END SECTION WORK bigCard */        
       /* SECTION WORK PROJECTS */
 body main div.sectionsBox section#work div.projects{
@@ -445,7 +451,7 @@ body main div.sectionsBox section#work div.projects div.project div.links img{
 
 body main div.sectionsBox section#work div.projects div.project div.links img:hover{
   filter: invert(86%) sepia(54%) saturate(3962%) hue-rotate(346deg) brightness(101%) contrast(94%);
-
+  cursor: pointer;
 }
 
 body main div.sectionsBox section#work div.projects div.project p{
@@ -468,13 +474,38 @@ body main div.sectionsBox section#work div.projects div.project div.details ul.l
       /* END SECTION WORK PROJECTS */
       /* END SECTION WORK */
       /* SECTION CONTACT */
-body main div.sectionsBox section#contact {
+body main div.sectionsBox section#contact{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-body main div.sectionsBox section#contact h2{
-  flex-basis: 100%;
-  
+body main div.sectionsBox section#contact div.contactContainer{
+  height: 14rem;
+  overflow: hidden;
+}
+
+body main div.sectionsBox section#contact div.contactContainer a,
+body main div.sectionsBox section#contact div.contactContainer h2{
+  position: relative;
+  font-size: 14rem;
+  line-height: 14rem;
+  text-align: center;
+  color: var(--grey2);
+}
+
+body main div.sectionsBox section#contact div.contactContainer a:hover{
+  text-shadow: none;
+}
+
+body main div.sectionsBox section#contact div.contactContainer:hover{
+  display: block;
+  transform: scale(1.2);
+}
+
+body main div.sectionsBox section#contact div.contactContainer:hover a,
+body main div.sectionsBox section#contact div.contactContainer:hover h2{
+  top: -14rem;
 }
       /* END SECTION CONTACT */
 
