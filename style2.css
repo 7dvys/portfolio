@@ -66,7 +66,8 @@ h1{
 h2{
   line-height: 5.5rem;
   color: var(--grey3);
-  font-size: 4rem;
+  font-size: 5rem;
+  flex-basis: 100%;
 }
 
 body{
@@ -159,7 +160,6 @@ body main div.sectionsBox section#home{
 }
 
 body main div.sectionsBox section#home span,
-body main div.sectionsBox section#home h2,
 body main div.sectionsBox section#home h1,
 body main div.sectionsBox section#home p{
   flex-basis: 100%;
@@ -194,10 +194,6 @@ body main div.sectionsBox section#about div.aboutText{
   justify-content: space-between;
 }
 
-body main div.sectionsBox section#about h2{
-  flex-basis: 100%;
-}
-
 body main div.sectionsBox section#about p{
   flex-basis: 60%;
 }
@@ -230,7 +226,6 @@ body main div.sectionsBox section#experience{
 }
 
 body main div.sectionsBox section#experience h2{
-  flex-basis: 100%;
   margin-bottom: 2vh;
 }
 
@@ -304,9 +299,6 @@ body main div.sectionsBox section#work{
   font-family: "Noto Sans";
 }
 
-body main div.sectionsBox section#work h2{
-  flex-basis: 100%;
-}
       /* END SECTION WORK GENERALES */
 
       /* SECTION WORK bigCard */
