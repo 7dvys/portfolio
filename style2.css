@@ -494,7 +494,7 @@ body main section#work div.projects div.project div.details {
   display: flex;
   flex-basis: 100%;
   justify-content: space-between;
-}
+}git 
 
 body main section#work div.projects div.project div.details ul.lenguages {
   display: flex;
@@ -504,6 +504,20 @@ body main section#work div.projects div.project div.details ul.lenguages {
 /* END SECTION WORK PROJECTS */
 /* END SECTION WORK */
 /* SECTION CONTACT */
+body section#contact{
+  padding:var(--generalPadding);
+  text-align: center;
+}
+
+body section#contact *{
+  margin: 0px auto;
+
+}
+
+body section#contact p{
+  flex-basis: 100%;
+  margin-bottom: 0.5rem;
+}
 
 
 
@@ -513,6 +527,24 @@ body main section#work div.projects div.project div.details ul.lenguages {
 /* END MAIN */
 
 /* FOOTER */
+body footer{
+  height: 4rem;
+  margin-bottom: 3rem;
+}
+
+body footer *{
+  text-align: center;
+}
+
+body footer div img{
+  height: 1.5rem;
+}
+
+body footer div img:hover{
+  cursor: pointer;
+}
+
+/* END FOOTER */
 
 /* / Tablets en horizonal y escritorios normales */
 /* ------------------------------------------------------------------------- / */
